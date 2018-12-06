@@ -1,11 +1,11 @@
 class UserMailer < ApplicationMailer
 
-  default from: 'notifications@example.com'
+  default from: 'no-reply@jungle.com'
 
   def your_order(order)
     @order = order
     @url  = 'http://example.com/login'
-    mail(to: order.id, subject: 'Welcome to My Awesome Site')
+    mail(to: 'apples', subject: order.id)
   end
 
 end

@@ -8,6 +8,16 @@
       Your has been placed.  The Order id is: <%= @order.id %>.<br>
     </p>
     <p>
+        <% @order.line_items.each do |item| %>
+          Item: <%= item.product.name %>
+          <%= item.product.price %>
+          Quantity: <%= item.quantity %>
+          Subtotal: <%= item.product.price * item.quantity %>
+          -----
+        <% end %>
+          Total Invoice <%= @order.total_cents / 100.0 %>
+    </p>
+    <p>
     </p>
 
     <p>Thanks for ordering and have a great day!</p>
