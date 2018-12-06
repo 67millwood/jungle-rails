@@ -4,8 +4,18 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
+
+
+
+
+
+
+
+
+
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h4>Thank you for your order! <%= current_user.first_name %></h4>
+    <h4>A confirmation email has been sent to: <%= current_user.email %></h4>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
