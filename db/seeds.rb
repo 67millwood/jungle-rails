@@ -132,5 +132,58 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## REVIEWS
+
+puts "Re-creating Reviews ..."
+
+prod1 = Product.find_by(id: 5)
+prod2 = Product.find_by(id: 9)
+prod3 = Product.find_by(id: 2)
+prod4 = Product.find_by(id: 6)
+
+prod1.reviews.create!({
+  description: "Oh my goodness a seed review",
+  rating: 4
+})
+
+prod1.reviews.create!({
+  description: "Oh my goodness a seed review",
+  rating: 4
+})
+
+prod1.reviews.create!({
+  description: "Sometimes a review can be an amazing thing",
+  rating: 3
+})
+
+prod1.reviews.create!({
+  description: "I really enjoyed this item.",
+  rating: 5
+})
+
+prod2.reviews.create!({
+  description: "Never buy this.",
+  rating: 1
+})
+
+prod2.reviews.create!({
+  description: "Incredible value at this price",
+  rating: 3
+})
+
+prod3.reviews.create!({
+  description: "Who would have thought I actually neeed this every day!!",
+  rating: 5
+})
+
+prod3.reviews.create!({
+  description: "This made me feel like a real man.  Thank you",
+  rating: 4
+})
+
+prod4.reviews.create!({
+  description: "All of my dreams have come true",
+  rating: 4
+})
 
 puts "DONE!"
