@@ -33,8 +33,9 @@
           Review: <%= review.description %><br>
           Rating: <%= review.rating %><br>
 
-          <%= link_to fa_icon('trash'), product_review_path(@product, review), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
-
+          <% if current_user.id == review.user_id %>
+          <%= link_to fa_icon('trash'), product_review_path(@product, review), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %><br>
+          <% end %>
           -----<br>
           <% end %>
     </div>
