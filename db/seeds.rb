@@ -134,6 +134,7 @@ cat3.products.create!({
 
 ## REVIEWS
 ## id: 5 - russion spy shoes; id: 9 - smartwatch; id: 2 - zebra pants; id: 6 - feet shoes
+Review.destroy_all
 
 puts "Re-creating Reviews ..."
 
