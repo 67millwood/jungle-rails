@@ -133,6 +133,7 @@ cat3.products.create!({
 })
 
 ## REVIEWS
+## id: 5 - russion spy shoes; id: 9 - smartwatch; id: 2 - zebra pants; id: 6 - feet shoes
 
 puts "Re-creating Reviews ..."
 
@@ -147,7 +148,7 @@ prod1.reviews.create!({
 })
 
 prod1.reviews.create!({
-  description: "Oh my goodness a seed review",
+  description: "I think Valeria owns a pair of these.",
   rating: 4
 })
 
