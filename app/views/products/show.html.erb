@@ -37,7 +37,7 @@
     </div>
     <% end %>
 
-
+    <% if current_user %>
     <div class="row">
     <h2>Add a Review:</h2>
       <%= form_for([@product, @product.reviews.build]) do |f| %>
@@ -53,6 +53,7 @@
             <%= f.submit %>
          </p>
       <% end %>
+    <% end %>
     </div>
 
 
