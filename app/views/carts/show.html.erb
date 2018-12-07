@@ -4,6 +4,11 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if cart_subtotal_cents == 0 %>
+  <p> Your cart is empty</p>
+  <%= link_to "Go Back Home", [:root] %>
+  <% else %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +53,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
